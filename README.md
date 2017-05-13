@@ -14,15 +14,13 @@ Java app / library used to obtain detailed informations about Andoid APK files.
    * [File hashes](#hash)
 * [Used libraries](#Used_libs)
  
+---
 
-<a name="How_to_use_it"/>
-## How to use it
-<a name="Prepare_for_first_use"/>
-#### Prepare for first use
-If you want to build and make changes in code of ApkAnalyzer, you need to perform following steps.
-ApkAnalyzer uses Apktool for decompilation of Apk. You need to add Apktool to your maven repository.<br/>
-1. Download apktool_2.0.0rc4 from https://bitbucket.org/iBotPeaches/apktool/downloads<br/>
-2. Run following maven command : mvn install:install-file -Dfile=<path-to-apktool_2.0.0rc4-file> -DgroupId=ApkTool -DartifactId=ApkTool -Dversion=2.0.0.rc4 -Dpackaging=jar<br/>
+# How to use it
+
+Build jar:
+
+```./gradlew shadowJar```
 
 ApkAnalyzer uses maven to build. It`s designed to allow you to customize way it works and various values as thresholds. This can only be done using public API, not using command line parameters (not implemented yet).
 

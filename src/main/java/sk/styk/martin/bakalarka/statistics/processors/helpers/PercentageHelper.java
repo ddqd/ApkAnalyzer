@@ -7,6 +7,11 @@ import java.math.BigDecimal;
  */
 public class PercentageHelper {
     public static BigDecimal getPercentage(double part, double whole) {
-        return new BigDecimal(part * 100 / whole);
+        final double res = (part * 100 / whole);
+        if (!Double.isNaN(res)) {
+            return BigDecimal.valueOf(res);
+        } else {
+        	return BigDecimal.valueOf(0);
+        }
     }
 }

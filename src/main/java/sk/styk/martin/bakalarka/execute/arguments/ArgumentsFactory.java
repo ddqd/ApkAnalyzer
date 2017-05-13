@@ -1,8 +1,13 @@
 package sk.styk.martin.bakalarka.execute.arguments;
 
-import org.apache.commons.cli.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.OptionGroup;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+import org.apache.log4j.Logger;
 
 /**
  * Creates command line options
@@ -11,7 +16,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ArgumentsFactory {
 
-    private static final Logger logger = LoggerFactory.getLogger(ArgumentsFactory.class);
+    private static final Logger logger = Logger.getLogger(ArgumentsFactory.class);
 
     private static final String OPTION_ANALYZE = "analyze";
     private static final String OPTION_COMPARE = "compare";
